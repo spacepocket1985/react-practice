@@ -1,8 +1,6 @@
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
-type NumberComponentProps = { numberProp: number };
-
-export const NumberComponent: React.FC<NumberComponentProps> = ({
+export const NumberComponent: React.FC<{ numberProp: number }> = ({
   numberProp,
 }) => {
   return (

@@ -1,9 +1,7 @@
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 import './ArrayComponent.css';
 
-type ArrayComponentProps = { arrayProp: string[] };
-
-export const ArrayComponent: React.FC<ArrayComponentProps> = ({
+export const ArrayComponent: React.FC<{ arrayProp: string[] }> = ({
   arrayProp,
 }) => {
   return (

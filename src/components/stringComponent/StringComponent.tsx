@@ -1,8 +1,6 @@
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
-type StringComponentPropsType = { stringProp: string };
-
-export const StringComponent: React.FC<StringComponentPropsType> = ({
+export const StringComponent: React.FC<{ stringProp: string }> = ({
   stringProp,
 }) => {
   return (

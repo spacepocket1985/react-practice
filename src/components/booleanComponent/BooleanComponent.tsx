@@ -1,8 +1,6 @@
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
-type BooleanComponentProps = { booleanProp: boolean };
-
-export const BooleanComponent: React.FC<BooleanComponentProps> = ({
+export const BooleanComponent: React.FC<{ booleanProp: boolean }> = ({
   booleanProp,
 }) => {
   return (
