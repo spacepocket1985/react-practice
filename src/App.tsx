@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Header } from './components/layout/Header';
+import { ParentComponent } from './components/parentComponent/ParentComponent';
 import './App.css';
 
 const App: FC = () => {
@@ -8,7 +9,7 @@ const App: FC = () => {
     <>
       <Header />
       <main>
-        <h3>Main</h3>
+        <ParentComponent />
       </main>
     </>
   );
