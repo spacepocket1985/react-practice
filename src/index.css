@@ -95,3 +95,12 @@ input {
   background-color: var(--first-color);
   border: 0.2rem solid var(--second-color);
 }
+
+main {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
