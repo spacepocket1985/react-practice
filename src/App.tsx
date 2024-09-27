@@ -1,6 +1,10 @@
 import { FC } from 'react';
 
 import { Header } from './components/layout/Header';
+import { IncreaseState } from './components/increaseState/IncreaseState';
+import { HideShowText } from './components/hideShowText/HideShowText';
+import { DataFromInput } from './components/controlInput/DataFromInput';
+import { ChangeTextColor } from './components/changeTextColor/ChangeTextColor';
 import './App.css';
 
 const App: FC = () => {
@@ -8,7 +12,10 @@ const App: FC = () => {
     <>
       <Header />
       <main>
-        <h3>Main</h3>
+        <IncreaseState />
+        <HideShowText />
+        <DataFromInput />
+        <ChangeTextColor />
       </main>
     </>
   );

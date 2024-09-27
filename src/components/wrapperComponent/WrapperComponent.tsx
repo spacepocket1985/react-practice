@@ -12,7 +12,7 @@ export const WrapperComponent: React.FC<WrapperProps> = ({
   return (
     <div className="wrapperComponent">
       <p className="indicator">{indicator}</p>
-      {children}
+      <div className="innerWrapper">{children}</div>
     </div>
   );
 };
