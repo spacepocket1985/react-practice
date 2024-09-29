@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Character, getCharacter } from '../../utils/getCharacter';
+import { Character, getCharacter, IdToxicRick } from '../../utils/getCharacter';
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
 export type EmptyPropsType = object;
@@ -20,7 +20,7 @@ export class DidMountClass extends Component<EmptyPropsType, StateType> {
     };
   }
   componentDidMount(): void {
-    getCharacter('361')
+    getCharacter(IdToxicRick)
       .then((data) => {
         this.setState({ character: data, isLoading: false, error: '' });
       })

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { StateType } from './DidMountClass';
-import { getCharacter } from '../../utils/getCharacter';
+import { getCharacter, IdToxicRick } from '../../utils/getCharacter';
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
 export const DidMountFunc: React.FC = () => {
@@ -10,7 +10,7 @@ export const DidMountFunc: React.FC = () => {
     error: '',
   });
   useEffect(() => {
-    getCharacter('361')
+    getCharacter(IdToxicRick)
       .then((data) => {
         setData({ character: data, isLoading: false, error: '' });
       })

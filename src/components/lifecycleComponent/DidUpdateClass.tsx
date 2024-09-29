@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { EmptyPropsType } from './DidMountClass';
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
+import { Counter, CounterAction } from '../counter/Counter';
 
 export type CounteState = {
   count: number;
@@ -20,12 +21,21 @@ export class DidUpdateClass extends Component<EmptyPropsType, CounteState> {
     this.setState((prevState) => ({ count: prevState.count - 1 }));
   };
 
-  componentDidUpdate(
-    _prevProps: object,
-    prevState: Readonly<CounteState>
-  ): void {
-    if (prevState.count !== this.state.count)
-      console.log('ClassComponentDidUpdate => update counter!');
+  onCounterClick = (type: CounterAction): void => {
+    switch (type) {
+      case CounterAction.Increase:
+        this.setState((prevState) => ({ count: prevState.count + 1 }));
+        break;
+      case CounterAction.Decrease:
+        this.setState((prevState) => ({ count: prevState.count - 1 }));
+        break;
+      default:
+        break;
+    }
+  };
+
+  componentDidUpdate(): void {
+    console.log('ClassComponentDidUpdate => update counter!');
   }
 
   shouldComponentUpdate(
@@ -40,9 +50,7 @@ export class DidUpdateClass extends Component<EmptyPropsType, CounteState> {
   render(): JSX.Element {
     return (
       <WrapperComponent indicator="ComponentDidUpdate (Class)">
-        <p className="sphere">{this.state.count}</p>
-        <button onClick={this.onIncrease}>Increase</button>
-        <button onClick={this.onDecrease}>Decrease</button>
+        <Counter count={this.state.count} action={this.onCounterClick} />
       </WrapperComponent>
     );
   }

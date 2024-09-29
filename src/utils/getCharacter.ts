@@ -25,6 +25,8 @@ export type Character = {
   created: string;
 };
 
+export const IdToxicRick = '361';
+
 export const getCharacter = async (id: string): Promise<Character> => {
   const response = await fetch(`${_ApiEndpoint}${id}`);
 
