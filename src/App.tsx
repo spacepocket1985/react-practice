@@ -30,7 +30,7 @@ const App: FC = () => {
   const handleChangeInputValue = (
     e: React.ChangeEvent<HTMLInputElement>
   ): void => {
-    setInputValue(e.currentTarget.value);
+    setInputValue(e.target.value);
   };
 
   const hundleUpdate = (id: string) => {

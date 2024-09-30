@@ -1,4 +1,3 @@
-
 import { ItemType } from '../../App';
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 import './LIst.css';
@@ -7,16 +6,20 @@ type ListPropsType = { data: ItemType[]; onUpdateItem: (id: string) => void };
 
 export const List: React.FC<ListPropsType> = ({ data, onUpdateItem }) => {
   const handleUpdateItem = (id: string): void => {
-    onUpdateItem(id)
+    onUpdateItem(id);
   };
 
-  const rederData = data.map((item) => {
-
+  const renderData = data.map((item) => {
     return (
       <li key={item.id} className="listLine">
         <span>name:</span>
         {item.name}
-        <button onClick={()=>{handleUpdateItem(item.id)}} className="sphere">
+        <button
+          onClick={() => {
+            handleUpdateItem(item.id);
+          }}
+          className="sphere"
+        >
           !!!
         </button>
       </li>
@@ -24,7 +27,7 @@ export const List: React.FC<ListPropsType> = ({ data, onUpdateItem }) => {
   });
   return (
     <WrapperComponent indicator="Item list">
-      <ul>{rederData}</ul>
+      <ul>{renderData}</ul>
     </WrapperComponent>
   );
 };
