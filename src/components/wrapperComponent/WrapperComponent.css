@@ -5,10 +5,9 @@
   flex-direction: column;
   text-align: left;
   gap: 1rem;
-  border: .2rem solid var(--second-color);
-  border-top-left-radius: 1rem;
+  border: 0.2rem solid var(--second-color);
+  border-top-left-radius: 1.3rem;
   padding-bottom: 1rem;
-
 }
 
 .indicator {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CounterMemo,  CounterAction } from '../counter/Counter';
+import { CounterMemo, CounterAction } from '../counter/Counter';
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
 export const DidUpdateFunc: React.FC = () => {

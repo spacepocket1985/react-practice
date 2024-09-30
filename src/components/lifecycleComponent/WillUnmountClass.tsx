@@ -29,15 +29,11 @@ export class WillUnmountClass extends Component<EmptyPropsType, CounteState> {
   stopTimer(): void {
     if (this.timerId) {
       clearInterval(this.timerId);
-      this.timerId = undefined; 
+      this.timerId = undefined;
     }
   }
 
   render(): JSX.Element {
-    return (
-
-        <div>{this.state.count}</div>
-
-    );
+    return <div>{this.state.count}</div>;
   }
 }
