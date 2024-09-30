@@ -57,9 +57,10 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+button,
+input {
   border-radius: 0.8rem;
-  border: 0.1rem solid transparent;
+  border: 0.2rem solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -74,4 +75,36 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 0.4rem auto -webkit-focus-ring-color;
+}
+
+.sphere {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--third-color);
+  border: 0.2rem solid var(--main-color);
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.sphere:hover{
+  transform: scale(1.1);
+}
+
+input {
+  background-color: var(--first-color);
+  border: 0.2rem solid var(--second-color);
+}
+
+.wrapperInputBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .5rem;
 }
