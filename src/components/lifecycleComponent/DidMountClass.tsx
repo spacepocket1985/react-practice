@@ -3,6 +3,7 @@ import { Character, getCharacter, IdToxicRick } from '../../utils/getCharacter';
 import { WrapperComponent } from '../wrapperComponent/WrapperComponent';
 
 export type EmptyPropsType = object;
+export type EmptyStateType = object;
 
 export type StateType = {
   character: Character | null;

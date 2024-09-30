@@ -42,6 +42,10 @@ export class DidUpdateClass extends Component<EmptyPropsType, CounteState> {
     _nextProps: object,
     nextState: Readonly<CounteState>
   ): boolean {
+    if (this.state.count === nextState.count) {
+      return false;
+    }
+
     if (nextState.count % 2 !== 0) {
       return false;
     }

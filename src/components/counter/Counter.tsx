@@ -6,19 +6,21 @@ export enum CounterAction {
   Decrease = 'Decrease',
 }
 
-const areEqual = (
-  prevProps: { count: number; action: (type: CounterAction) => void },
-  nextProps: { count: number; action: (type: CounterAction) => void }
-) => {
-  return nextProps.count % 2 === 0 && prevProps.count % 2 === 0;
-};
-
-export const Counter: React.FC<{
+type CounterPropsType = {
   count: number;
   action: (type: CounterAction) => void;
-}> = ({ count, action }) => {
+};
+
+const areEqual = (prevProps: CounterPropsType, nextProps: CounterPropsType) => {
+  const prevIsEven = prevProps.count % 2 === 0;
+  const nextIsOdd = nextProps.count % 2 !== 0;
+
+  return prevIsEven && nextIsOdd;
+};
+
+export const Counter: React.FC<CounterPropsType> = ({ count, action }) => {
   const handleOnClick = (type: CounterAction) => action(type);
-  console.log('render counter')
+
   return (
     <div className="counterWrapper">
       <button
