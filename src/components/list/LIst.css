@@ -1,0 +1,22 @@
+.listLine {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
+.listLine span {
+  border-radius: 0.8rem;
+  border: 0.2rem solid transparent;
+  padding: 0.6em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+

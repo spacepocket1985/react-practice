@@ -89,9 +89,22 @@ button:focus-visible {
   background-color: var(--third-color);
   border: 0.2rem solid var(--main-color);
   font-weight: 600;
+  transition: all .3s;
+}
+
+.sphere:hover{
+  transform: scale(1.1);
 }
 
 input {
   background-color: var(--first-color);
   border: 0.2rem solid var(--second-color);
+}
+
+.wrapperInputBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .5rem;
 }
