@@ -1,74 +1,87 @@
-import { Box, TextField } from '@mui/material';
+import { Box, TextField, Button } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+
+const Gender = ['male', 'female ', 'unknown'];
 
 export const RegistrationForm: React.FC = () => {
   return (
     <Grid
       container
-      style={{ height: '100vh' }}
+      sx={{ marginTop: '20px' }}
       justifyContent="center"
       alignItems="center"
     >
-      <Grid>
-        <Box
-          component="form"
-          sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
-          noValidate
-          autoComplete="off"
-        >
-          <div>
-            <TextField
-              required
-              id="outlined-required"
-              label="Required"
-              defaultValue="Hello World"
-            />
-            <TextField
-              disabled
-              id="outlined-disabled"
-              label="Disabled"
-              defaultValue="Hello World"
-            />
-            <TextField
-              id="outlined-password-input"
-              label="Password"
-              type="password"
-              autoComplete="current-password"
-            />
-            <TextField
-              id="outlined-read-only-input"
-              label="Read Only"
-              defaultValue="Hello World"
-              slotProps={{
-                input: {
-                  readOnly: true,
-                },
-              }}
-            />
-            <TextField
-              id="outlined-number"
-              label="Number"
-              type="number"
-              slotProps={{
-                inputLabel: {
-                  shrink: true,
-                },
-              }}
-            />
-            <TextField
-              id="outlined-search"
-              label="Search field"
-              type="search"
-            />
-            <TextField
-              id="outlined-helperText"
-              label="Helper text"
-              defaultValue="Default Value"
-              helperText="Some important text"
-            />
-          </div>
-        </Box>
-      </Grid>
+      <Box
+        component="form"
+        sx={{ '& .MuiTextField-root': { m: 1, width: '30ch' } }}
+        noValidate
+        autoComplete="off"
+      >
+        <div>
+          <TextField
+            id="outlined-name-input"
+            label="Name"
+            type="text"
+            required
+          />
+
+          <TextField
+            id="outlined-email-input"
+            label="email"
+            type="email"
+            required
+          />
+          <TextField
+            id="outlined-date-input"
+            label="date of birth"
+            type="date"
+            slotProps={{
+              inputLabel: {
+                shrink: true,
+              },
+            }}
+            required
+          />
+        </div>
+        <div>
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="current-password"
+          />
+          <TextField
+            id="outlined-confirmPassword-input"
+            label="Confirm password"
+            type="password"
+            autoComplete="current-password"
+          />
+
+          <TextField
+            id="outlined-select-currency-native"
+            select
+            label="Gender"
+            defaultValue="EUR"
+            slotProps={{
+              select: {
+                native: true,
+              },
+            }}
+          >
+            {Gender.map((item, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
+          </TextField>
+        </div>
+
+        <Box display="flex" justifyContent="center" sx={{ marginTop: '20px' }}>  
+          <Button type="submit" variant="contained" >  
+            Submit  
+          </Button>  
+        </Box>  
+      </Box>
     </Grid>
   );
 };
