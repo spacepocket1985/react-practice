@@ -19,7 +19,6 @@
   line-height: 1.5;
   font-weight: 400;
   color: var(--main-color);
-  font-size: 1.2rem;
 }
 
 a {
@@ -43,9 +42,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-size: 1.8rem;
 }
 
 main {
+  margin: auto;
+  max-width: 128rem;
   width: 100%;
   padding: 1rem;
   background-color: var(--first-color);
@@ -60,21 +62,16 @@ h1 {
 button,
 input {
   border-radius: 0.8rem;
-  border: 0.2rem solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--second-color);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s;
 }
 button:hover {
   border-color: var(--main-color);
-}
-button:focus,
-button:focus-visible {
-  outline: 0.4rem auto -webkit-focus-ring-color;
 }
 
 .sphere {
@@ -94,4 +91,9 @@ button:focus-visible {
 input {
   background-color: var(--first-color);
   border: 0.2rem solid var(--second-color);
+}
+
+.innerWrapper {
+  max-width: 128rem;
+  width: 100%;
 }
