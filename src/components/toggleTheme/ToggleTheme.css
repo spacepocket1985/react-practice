@@ -1,0 +1,20 @@
+.toggleBtn {
+  padding: 1.6rem;
+  padding-left: 5.5rem;
+  width: 11rem;
+  color: var(--second-color);
+  border: 0.2rem var(--second-color) solid;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-color: var(--main-color);
+  background-position: left 0.2rem top 0.6rem;
+  transition: all 0.3s;
+}
+
+.toggleLight {
+  background-image: url('./lightTheme.png');
+}
+
+.toggleDark {
+  background-image: url('./darkTheme.png');
+}

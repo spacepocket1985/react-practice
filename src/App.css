@@ -1,8 +1,21 @@
 #root {
-  max-width: 1280px;
-  width: 100%;
   margin: auto;
-  margin-top: 1rem;
-  padding: 2rem;
+  margin-top: 0;
+  width: 100%;
+  height: 100vh;
   text-align: center;
+}
+
+.base {
+  margin: auto;
+  padding: 2rem;
+  height: 100%;
+}
+
+.themeLight {
+  background-color: white;
+}
+
+.themeDark {
+  background-color: rgb(55, 60, 60);
 }
