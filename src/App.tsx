@@ -1,15 +1,17 @@
-import { FC } from 'react';
-
+import { Layout } from 'antd';
 import { Header } from './components/layout/Header';
-import './App.css';
+import { Footer } from './components/layout/Footer';
 
-const App: FC = () => {
+const { Content } = Layout;
+
+const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <main>
-        <h3>Main</h3>
-      </main>
+      <Layout>
+        <Header />
+        <Content>main content</Content>
+        <Footer />
+      </Layout>
     </>
   );
 };
