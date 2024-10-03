@@ -1,13 +1,19 @@
 import { Menu } from 'antd';
+import { Link } from 'react-router-dom';
+import { routes } from '../../routes/routes';
 
-const MenuItems = new Array(15).fill(null).map((_, index) => ({
-  key: index + 1,
-  label: `nav ${index + 1}`,
-}));
 export const MainMenu: React.FC = () => {
+  const MenuItems = routes.map((route, index) => ({
+    key: index + 1,
+    label: (
+      <Link to={route.path}  rel="noopener noreferrer">
+        {route.menuDescription}
+      </Link>
+    ),
+  }));
+
   return (
     <Menu
-      
       theme="dark"
       mode="vertical"
       // defaultSelectedKeys={['1']}

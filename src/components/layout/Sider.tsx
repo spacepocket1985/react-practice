@@ -5,10 +5,8 @@ const siderStyle: React.CSSProperties = {
   textAlign: 'center',
   lineHeight: '120px',
   color: '#fff',
-  backgroundColor: '#1677ff',
   margin: '5px',
   borderRadius: '10px',
-
 };
 
 export const Sider: React.FC = () => {

@@ -13,5 +13,9 @@ const headerStyle: React.CSSProperties = {
 
 export const Header: React.FC = () => {
   const { Header } = Layout;
-  return <Header style={headerStyle}><h1>React notebook</h1></Header>;
+  return (
+    <Header style={headerStyle}>
+      <h1>React notebook</h1>
+    </Header>
+  );
 };
