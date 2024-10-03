@@ -1,16 +1,34 @@
 import { Layout } from 'antd';
-import { useState } from 'react';
+import { MainMenu } from '../menu/MainMenu';
+
+const siderStyle: React.CSSProperties = {
+  textAlign: 'center',
+  lineHeight: '120px',
+  color: '#fff',
+  backgroundColor: '#1677ff',
+  margin: '5px',
+  borderRadius: '10px',
+
+};
 
 export const Sider: React.FC = () => {
   const { Sider } = Layout;
-  const [collapsed, setCollapsed] = useState(false);
+
+  // const siderStyle: React.CSSProperties = {
+  //   borderRight:'5px solid #fff',
+  //   overflow: 'auto',
+  //   height: '100vh',
+  //   position: 'fixed',
+  //   insetInlineStart: 0,
+  //   top: 0,
+  //   bottom: 0,
+  //   scrollbarWidth: 'thin',
+  //   scrollbarColor: 'unset',
+  // };
+
   return (
-    <Sider
-      collapsible
-      collapsed={collapsed}
-      onCollapse={(value) => setCollapsed(value)}
-    >
-      <div className="demo-logo-vertical" />
+    <Sider style={siderStyle}>
+      <MainMenu />
     </Sider>
   );
 };
