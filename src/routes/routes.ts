@@ -11,7 +11,7 @@ import { VirtualDom } from '../pages/VirtualDom';
 export const routes = [
   {
     menuDescription: 'Структура проекта',
-    description: 'Структура проекта',
+    description: '🏩Структура проекта',
     path: '/project-structure',
     Page: ProjectStructure,
   },
@@ -31,25 +31,25 @@ export const routes = [
 
   {
     menuDescription: 'Props',
-    description: 'Что такое пропсы и зачем они нужны',
+    description: '🎃Что такое пропсы и зачем они нужны',
     path: '/props',
     Page: Props,
   },
   {
     menuDescription: 'State (useState)',
-    description: 'State (useState)',
+    description: '💰State (useState)',
     path: '/state',
     Page: State,
   },
   {
     menuDescription: 'LifeCycle (useEffect)',
-    description: 'LifeCycle (useEffect)',
+    description: '🎂LifeCycle (useEffect)',
     path: '/lifeCycle',
     Page: LifeCycle,
   },
   {
     menuDescription: 'Events',
-    description: 'Events и как работать с ними',
+    description: '❔Events и как работать с ними.',
     path: '/events',
     Page: Events,
   },

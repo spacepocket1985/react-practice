@@ -1,14 +1,10 @@
 import { Typography } from 'antd';
 import { DataList } from '../components/dataList/DataList';
-
-const ListDataPureFunction = {
-  header: '“Чистой” называется функция, которая:',
-  listData: [
-    'Для одинаковых входных данных всегда возвращает один результат.',
-    'Не имеет побочных эффектов (то есть не изменяет внешние состояния).',
-    'Не зависит от внешних состояний.',
-  ],
-};
+import { CodeEditor } from '../components/codeEditor/CodeEditor';
+import {
+  CodeOnComponents,
+  ListPureFunction,
+} from './dataForPages/dataComponents';
 
 export const Components: React.FC = () => {
   const { Text, Title, Paragraph } = Typography;
@@ -42,14 +38,7 @@ export const Components: React.FC = () => {
         </Text>{' '}
         в React:
       </Paragraph>
-      <pre>
-        <Paragraph code>{`class MyComponent extends React.Component {
-  render() {
-    return <div>Hello, Redev!</div>;
-  }
-}
-export default MyComponent;`}</Paragraph>
-      </pre>
+      <CodeEditor code={CodeOnComponents.classExample} />
 
       <Paragraph>
         Пример объявления{' '}
@@ -58,12 +47,8 @@ export default MyComponent;`}</Paragraph>
         </Text>{' '}
         в React:
       </Paragraph>
-      <pre>
-        <Paragraph code>{`const MyComponent = () => {
-  return <div>Hello, Redev!</div>;
-}
-export default MyComponent;`}</Paragraph>
-      </pre>
+
+      <CodeEditor code={CodeOnComponents.funcExample} />
       <Paragraph>
         Оба примера создают компонент, который отображает текст{' '}
         <Text strong>Hello, Redev!</Text>. Разница заключается в том, что
@@ -78,8 +63,8 @@ export default MyComponent;`}</Paragraph>
         🚀Компонента должна себя вести как чистая функция.
       </Title>
       <DataList
-        header={ListDataPureFunction.header}
-        listData={ListDataPureFunction.listData}
+        header={ListPureFunction.header}
+        listData={ListPureFunction.listData}
       />
       <Title level={4}>Stateless VS Stateful</Title>
       <Paragraph>
@@ -94,11 +79,7 @@ export default MyComponent;`}</Paragraph>
         могут изменять свое поведение в зависимости от событий или действий
         пользователя.
       </Paragraph>
-      <pre>
-        <Paragraph code>{`const Greeting = ({name}) => {
-  return <h1>Hello, {name}!</h1>;
-};`}</Paragraph>
-      </pre>
+      <CodeEditor code={CodeOnComponents.stateless} />
       <Paragraph>
         В этом примере компонент Greeting принимает проп name и отображает
         приветствие. Он не хранит состояние и не изменяется с течением времени.
@@ -117,24 +98,7 @@ export default MyComponent;`}</Paragraph>
           хуков useState и useEffect.
         </Text>
       </Paragraph>
-      <pre>
-        <Paragraph code>{`import React, { useState } from 'react';
-
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount(count => count + 1);
-  };
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-    </div>
-  );
-};;`}</Paragraph>
-      </pre>
+      <CodeEditor code={CodeOnComponents.stateful} />
       <Paragraph>
         ⚠️ Stateless компоненты просто рендерят UI, в то время как stateful
         компоненты имеют внутреннее состояние, которое позволяет им изменять
