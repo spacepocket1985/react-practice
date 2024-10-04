@@ -15,7 +15,6 @@
   font-weight: 400;
   color: var(--main-color);
   font-size: 1.2rem;
-
 }
 
 html {
@@ -23,10 +22,7 @@ html {
   font-size: 10px;
 }
 
-
-
 .pageTitle {
   margin-top: 1rem;
-  color: #fff;
+  color: #eae5e5;
 }
-

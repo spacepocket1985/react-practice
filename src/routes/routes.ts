@@ -1,15 +1,14 @@
-import { Components } from "../pages/Components";
-import { Context } from "../pages/Context";
-import { Events } from "../pages/Events";
-import { LifeCycle } from "../pages/LifeCycle";
-import { ProjectStructure } from "../pages/ProjectStructure";
-import { Props } from "../pages/Props";
-import { RefsAndOther } from "../pages/RefsAndOther";
-import { State } from "../pages/State";
-import { VirtualDom } from "../pages/VirtualDom";
+import { Components } from '../pages/Components';
+import { Context } from '../pages/Context';
+import { Events } from '../pages/Events';
+import { LifeCycle } from '../pages/LifeCycle';
+import { ProjectStructure } from '../pages/ProjectStructure';
+import { Props } from '../pages/Props';
+import { RefsAndOther } from '../pages/RefsAndOther';
+import { State } from '../pages/State';
+import { VirtualDom } from '../pages/VirtualDom';
 
 export const routes = [
-
   {
     menuDescription: 'Структура проекта',
     description: 'Структура проекта',

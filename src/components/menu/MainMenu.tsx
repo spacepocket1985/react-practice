@@ -6,7 +6,7 @@ export const MainMenu: React.FC = () => {
   const MenuItems = routes.map((route, index) => ({
     key: index + 1,
     label: (
-      <Link to={route.path}  rel="noopener noreferrer">
+      <Link to={route.path} rel="noopener noreferrer">
         {route.menuDescription}
       </Link>
     ),
