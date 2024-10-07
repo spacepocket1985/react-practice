@@ -1,6 +1,6 @@
 import { DataListPropsType } from '../../components/dataList/DataList';
 
-export const CodeOnComponents = {
+export const CodeForComponents = {
   classExample: `class MyComponent extends React.Component {
   render() {
     return <div>Hello, Redev!</div>;

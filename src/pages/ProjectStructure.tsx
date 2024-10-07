@@ -1,6 +1,6 @@
 import { Typography } from 'antd';
 import { CodeEditor } from '../components/codeEditor/CodeEditor';
-import { codeOnProjectStructure } from './dataForPages/dataProjectStructure';
+import { codeForProjectStructure } from './dataForPages/dataProjectStructure';
 
 export const ProjectStructure: React.FC = () => {
   const { Text, Title, Paragraph } = Typography;
@@ -10,9 +10,9 @@ export const ProjectStructure: React.FC = () => {
         Типичная структура проекта React, созданного с помощью Vite и
         TypeScript, может выглядеть следующим образом:
       </Paragraph>
-      <CodeEditor code={codeOnProjectStructure.project}></CodeEditor>
-      <Title>🍅package.json</Title>
-      <CodeEditor code={codeOnProjectStructure.packageJson}></CodeEditor>
+      <CodeEditor code={codeForProjectStructure.project}></CodeEditor>
+      <Title level={3}>🍅package.json</Title>
+      <CodeEditor code={codeForProjectStructure.packageJson}></CodeEditor>
       <Paragraph>
         <Text strong mark>
           ⚠️ Package.json

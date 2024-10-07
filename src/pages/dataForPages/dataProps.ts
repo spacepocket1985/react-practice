@@ -1,6 +1,6 @@
 import { DataListPropsType } from '../../components/dataList/DataList';
 
-export const codeOnProps = {
+export const codeForProps = {
   propsGive: `// Родительский компонент
 const ParentComponent = () => {
   const message = "Привет, Redev!";

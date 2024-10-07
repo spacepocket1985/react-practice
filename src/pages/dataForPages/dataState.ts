@@ -1,6 +1,6 @@
 import { DataListPropsType } from '../../components/dataList/DataList';
 
-export const CodeOnState = {
+export const CodeForState = {
   stateCreate: `import React, { useState } from 'react';
 
 const Counter = () => {

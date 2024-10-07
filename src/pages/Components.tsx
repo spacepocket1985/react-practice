@@ -2,7 +2,7 @@ import { Typography } from 'antd';
 import { DataList } from '../components/dataList/DataList';
 import { CodeEditor } from '../components/codeEditor/CodeEditor';
 import {
-  CodeOnComponents,
+  CodeForComponents,
   ListPureFunction,
 } from './dataForPages/dataComponents';
 
@@ -38,7 +38,7 @@ export const Components: React.FC = () => {
         </Text>{' '}
         в React:
       </Paragraph>
-      <CodeEditor code={CodeOnComponents.classExample} />
+      <CodeEditor code={CodeForComponents.classExample} />
 
       <Paragraph>
         Пример объявления{' '}
@@ -48,7 +48,7 @@ export const Components: React.FC = () => {
         в React:
       </Paragraph>
 
-      <CodeEditor code={CodeOnComponents.funcExample} />
+      <CodeEditor code={CodeForComponents.funcExample} />
       <Paragraph>
         Оба примера создают компонент, который отображает текст{' '}
         <Text strong>Hello, Redev!</Text>. Разница заключается в том, что
@@ -66,7 +66,7 @@ export const Components: React.FC = () => {
         header={ListPureFunction.header}
         listData={ListPureFunction.listData}
       />
-      <Title level={4}>Stateless VS Stateful</Title>
+      <Title level={4}>🙈Stateless VS Stateful</Title>
       <Paragraph>
         {
           'Когда речь идет о React, часто упоминаются термины "stateless" и "stateful". Чтобы понять, что они значат, давай разберемся c этим.'
@@ -79,7 +79,7 @@ export const Components: React.FC = () => {
         могут изменять свое поведение в зависимости от событий или действий
         пользователя.
       </Paragraph>
-      <CodeEditor code={CodeOnComponents.stateless} />
+      <CodeEditor code={CodeForComponents.stateless} />
       <Paragraph>
         В этом примере компонент Greeting принимает проп name и отображает
         приветствие. Он не хранит состояние и не изменяется с течением времени.
@@ -98,7 +98,7 @@ export const Components: React.FC = () => {
           хуков useState и useEffect.
         </Text>
       </Paragraph>
-      <CodeEditor code={CodeOnComponents.stateful} />
+      <CodeEditor code={CodeForComponents.stateful} />
       <Paragraph>
         ⚠️ Stateless компоненты просто рендерят UI, в то время как stateful
         компоненты имеют внутреннее состояние, которое позволяет им изменять

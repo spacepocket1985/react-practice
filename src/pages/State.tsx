@@ -2,7 +2,7 @@ import { Typography } from 'antd';
 import { CodeEditor } from '../components/codeEditor/CodeEditor';
 import { DataList } from '../components/dataList/DataList';
 import {
-  CodeOnState,
+  CodeForState,
   DataListStatAsync,
   DataListState,
   DataListStateObject,
@@ -78,7 +78,7 @@ export const State: React.FC = () => {
       <Paragraph>
         Например, можно создать состояние для отслеживания текущего счетчика:
       </Paragraph>
-      <CodeEditor code={CodeOnState.stateCreate}></CodeEditor>
+      <CodeEditor code={CodeForState.stateCreate}></CodeEditor>
       <Title level={4}>🔧Обновление состояния</Title>
       <Paragraph>
         Для обновления состояния в функциональных компонентах используется
@@ -97,7 +97,7 @@ export const State: React.FC = () => {
         передается новое значение состояния или функция. Когда новое состояние
         зависит от предыдущего, то лучше использовать функциональное обновление.
       </Paragraph>
-      <CodeEditor code={CodeOnState.updateState}></CodeEditor>
+      <CodeEditor code={CodeForState.updateState}></CodeEditor>
       <Paragraph>
         React автоматически обновит компонент и перерисует его с новым значением
         состояния:
@@ -110,11 +110,11 @@ export const State: React.FC = () => {
         соответствии с новыми данными. Пример использования состояния для
         отслеживания текущего счетчика и его отображения:
       </Paragraph>
-      <CodeEditor code={CodeOnState.stateExample}></CodeEditor>
+      <CodeEditor code={CodeForState.stateExample}></CodeEditor>
       <Title level={5}>
         💣State можно передавать в дочерние компоненты при помощи props.
       </Title>
-      <CodeEditor code={CodeOnState.statefromProps}></CodeEditor>
+      <CodeEditor code={CodeForState.statefromProps}></CodeEditor>
       <Paragraph>
         В данном примере состояние счетчика хранится в родительском компоненте
         ParentComponent, а значение состояния передается в дочерний компонент
@@ -126,7 +126,7 @@ export const State: React.FC = () => {
         При обновлении объекта в состоянии нужно создавать новый объект вместо
         изменения существующего, чтобы соблюсти принцип неизменяемости.
       </Paragraph>
-      <CodeEditor code={CodeOnState.stateObject}></CodeEditor>
+      <CodeEditor code={CodeForState.stateObject}></CodeEditor>
       <DataList {...DataListStateObject}></DataList>
       <Title level={4}>
         ⌚Функция-setter (например setState) - асинхронная операция!
@@ -143,7 +143,7 @@ export const State: React.FC = () => {
         Хотя классовые компоненты сейчас не используются, но знать как с ними
         работать нужно.
       </Paragraph>
-      <CodeEditor code={CodeOnState.stateClass}></CodeEditor>
+      <CodeEditor code={CodeForState.stateClass}></CodeEditor>
     </>
   );
 };

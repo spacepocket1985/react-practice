@@ -1,4 +1,4 @@
-export const CodeOnEvents = {
+export const CodeForEvents = {
   onClick: `const handleClick = () => {
   console.log('Кликнули!');
 }
@@ -49,4 +49,47 @@ const MyComponent = () => {
     <input type="text" onKeyDown={handleKeyDown} />
   );
 }`,
+  events: `
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {  
+    console.log(e.target.value);  
+};  
+
+<input type="text" onChange={handleChange} />
+
+
+const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {  
+    console.log('Button clicked');  
+};  
+
+<button onClick={handleClick}>Click me</button>
+
+
+const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {  
+    console.log('Input focused');  
+};  
+
+<input type="text" onFocus={handleFocus} />
+
+
+const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {  
+    console.log('Mouse entered');  
+};  
+
+<div onMouseEnter={handleMouseEnter}>Hover over me</div>
+
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {  
+    console.log('Key pressed:', e.key);  
+};  
+
+<input type="text" onKeyDown={handleKeyDown} />  
+
+
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  
+    e.preventDefault();  
+    console.log('Form submitted');  
+};  
+
+<form onSubmit={handleSubmit}>  
+    <button type="submit">Submit</button>  
+</form>`,
 };

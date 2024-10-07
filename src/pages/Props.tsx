@@ -1,7 +1,7 @@
 import { Typography } from 'antd';
 import { CodeEditor } from '../components/codeEditor/CodeEditor';
 import { DataList } from '../components/dataList/DataList';
-import { codeOnProps, DataListProps } from './dataForPages/dataProps';
+import { codeForProps, DataListProps } from './dataForPages/dataProps';
 
 export const Props: React.FC = () => {
   const { Text, Title, Paragraph } = Typography;
@@ -26,19 +26,19 @@ export const Props: React.FC = () => {
         передает пропс message со значением <Text code>Привет, Redev!</Text> в
         компонент ChildComponent и выводит это сообщение на экран.
       </Paragraph>
-      <CodeEditor code={codeOnProps.propsGive}></CodeEditor>
+      <CodeEditor code={codeForProps.propsGive}></CodeEditor>
       <Title level={4}>🍰Доступ к пропсам внутри компонентов</Title>
       <Paragraph>
         В функциональных компонентах пропсы доступны как параметр функции
         компонента. Например, <Text code>{'(props) => {...}.'}</Text>{' '}
       </Paragraph>
-      <CodeEditor code={codeOnProps.propsAccessFunc}></CodeEditor>
+      <CodeEditor code={codeForProps.propsAccessFunc}></CodeEditor>
       <Paragraph>
         В классовых компонентах пропсы доступны через{' '}
         <Text mark>this.props</Text> . Например,{' '}
         <Text mark>this.props.message</Text>. Пример с классовой компонентой:
       </Paragraph>
-      <CodeEditor code={codeOnProps.propsAccessClass}></CodeEditor>
+      <CodeEditor code={codeForProps.propsAccessClass}></CodeEditor>
       <Paragraph>
         <Text type="danger" strong>
           Props

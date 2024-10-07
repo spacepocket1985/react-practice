@@ -1,4 +1,4 @@
-export const codeOnProjectStructure = {
+export const codeForProjectStructure = {
   project: `my-react-app/  
 ├── index.html               # Главный HTML файл, в который будет внедрено React приложение.  
 ├── package.json             # Конфигурационный файл с зависимостями и метаданными проекта.  
