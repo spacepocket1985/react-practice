@@ -1,10 +1,21 @@
-import './Header.css';
+import { Layout } from 'antd';
+
+const headerStyle: React.CSSProperties = {
+  margin: '5px',
+  textAlign: 'center',
+  borderRadius: '10px',
+  color: '#fff',
+  height: 64,
+  paddingInline: 48,
+  lineHeight: '64px',
+  backgroundColor: '#001529',
+};
 
 export const Header: React.FC = () => {
+  const { Header } = Layout;
   return (
-    <header className="header">
-      <h2 className="headerTitle">React practice: </h2>
-      <p className="subTitle">task-000-props</p>
-    </header>
+    <Header style={headerStyle}>
+      <h1>React notebook</h1>
+    </Header>
   );
 };

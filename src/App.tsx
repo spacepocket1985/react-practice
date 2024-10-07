@@ -1,16 +1,12 @@
-import { FC } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import { Header } from './components/layout/Header';
-import './App.css';
+import { MainLayout } from './components/layout/MainLayout';
 
-const App: FC = () => {
+const App: React.FC = () => {
   return (
-    <>
-      <Header />
-      <main>
-        <h3>Main</h3>
-      </main>
-    </>
+    <Router>
+      <MainLayout />
+    </Router>
   );
 };
 
