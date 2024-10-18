@@ -2,7 +2,7 @@ import './WrapperComponent.css';
 
 type WrapperProps = {
   children: React.ReactNode;
-  indicator: string;
+  indicator?: string;
 };
 
 export const WrapperComponent: React.FC<WrapperProps> = ({

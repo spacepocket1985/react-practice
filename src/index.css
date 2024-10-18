@@ -95,3 +95,19 @@ input {
   background-color: var(--first-color);
   border: 0.2rem solid var(--second-color);
 }
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+.parentWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.counter {
+  font-size: 1.5rem;
+}
